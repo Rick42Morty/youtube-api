@@ -1,0 +1,160 @@
+body {
+  --n: 4;
+  --i: 0;
+  --tx: 0px;
+  --bg: blue;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);  
+  overflow-x: hidden;  
+}
+
+header {  
+  height: 10%;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+#search-box {
+  height: 30px;
+  width: 250px;
+  font-size: 20px;
+}
+
+#search-btn {
+  height: 34px;
+  width: 50px;
+  font-size: 20px;
+}
+
+main {         
+  display: flex;
+    
+  
+  width: 100%;
+  width: calc(var(--n)*100%);
+    
+  transform: translate(calc(var(--i, 0)/var(--n)*-100% + var(--tx, 0px)));  
+}
+
+.smooth { 
+  transition: transform .5s ease-out; 
+}
+
+.navigation.hidden,
+.popup.hidden {
+  display: none;
+}
+
+.item {
+  width: calc(100%/var(--n)); 
+  height: 80vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  word-break: break-all;
+  
+    
+  border-right: 20px solid var(--bg);
+  border-left: 20px solid var(--bg);
+  background-color: #f1f1f1;
+  pointer-events: none;
+  
+}
+
+img {
+  width: 100%;   
+}
+
+.item a {
+  width: 100%;
+  font-size: 1.1rem;  
+  text-align: center;  
+  word-break: break-all;
+  color: antiquewhite;
+  background-color: green;
+  pointer-events: auto;
+  margin: 0;
+}
+
+.item .views {   
+  font-size: 1.2rem;  
+  margin: 0;
+}
+
+.item .description {      
+  font-size: 1rem;
+  height: 30%;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid black;
+  padding: 1px;
+  margin: 0;
+}
+
+.item .published {  
+  font-size: 1.2rem;
+  white-space: normal;
+  text-decoration: underline;  
+  margin: 0;
+}
+
+.item .channel {   
+  font-size: 1.3rem;
+  white-space: normal;  
+  margin: 0;
+}
+
+.navigation {
+  position: relative;
+  font-size: 1,5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.navigation span {
+  font-size: 1.5rem;
+  color: antiquewhite;
+  background-color: black;  
+  border: 2px solid antiquewhite;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navigation button {
+  position: relative;
+  color: antiquewhite;
+  background-color: black;
+  font-size: 2rem;
+  border: 2px solid antiquewhite;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  transform: scale(1.2);
+  transition: transform .2s ease-out;
+}
+
+.navigation .popup {
+  position: absolute;
+  top: -55px;
+  left: 10px;
+  color: antiquewhite;
+  background-color: black;
+  font-size: 1.1rem;
+  border: 2px solid antiquewhite;
+  border-radius: 5%;
+  margin: 5px; 
+  padding: 4px; 
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3N0eWxlLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
